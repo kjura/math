@@ -1,0 +1,42 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\newtheorem{theorem}{Twierdzenie}
+
+\title{Notatki do rozdziału 4 Rachunek prawdopodobieństwa dla (prawie) każdego}
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+
+\section{4.1 Definicja. Rozkład zmiennej losowej.}
+\subsection{Dowód że przedział $[a,b] = \cap_{n=1}^{\infty}(a - \frac{1}{n}, b]$}
+
+Niech $x \in [a,b]$, $a,b$ $\in \mathbb{R}$. Zgodnie z definicją przedziału
+$a \leq x \leq b$. Zauważmy, że $a > a - \frac{1}{n}$ dla $n \in \mathbb{N}$. W takim razie
+$x > a - \frac{1}{n}$ dla $n \in \mathbb{N}$. Zapisujemy $x$ pomiędzy
+dwiema wielkościami:
+
+\begin{equation*}
+    a - \frac{1}{n} < x \leq b  \quad \textrm{dla} \quad n \in \mathbb{N}
+\end{equation*}
+
+\noindent
+Jako przedział:
+
+\begin{equation*}
+    x \in (a - \frac{1}{n}, b] \quad \textrm{dla} \quad n \in \mathbb{N} \iff \cap_{n=1}^{\infty}(a - \frac{1}{n}, b]
+\end{equation*}
+
+\vspace{10mm}
+\noindent
+W drugą stronę. Niech $x \in \cap_{n=1}^{\infty}(a - \frac{1}{n}, b]$
+
+\end{document}
