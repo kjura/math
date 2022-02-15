@@ -1,11 +1,33 @@
-\documentclass[12pt, letterpaper, twoside]{article}
+%\documentclass[12pt, letterpaper]{article}
+\documentclass[a4paper,oneside,openright,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\textwidth\paperwidth
+\advance\textwidth -55mm
+\oddsidemargin-1in
+\advance\oddsidemargin 30mm
+\evensidemargin-1in
+\advance\evensidemargin 25mm
+\topmargin -1in
+\advance\topmargin 2cm
+\setlength\textheight{48\baselineskip}
+\addtolength\textheight{\topskip}
+\marginparwidth15mm
+
+
+
+
 \newtheorem{theorem}{Twierdzenie}
 
 \title{Rozdział 2 Ciągi 2.2}
 \author{}
 \date{}
+
+\numberwithin{equation}{section}
 
 \begin{document}
 
@@ -15,15 +37,75 @@
 
 
 \section{Własności ciągów liczbowych}
-\subsection{Granica iloczynu ciągów jest równa \\ iloczynowi granic tych ciągów}
+\subsection{Granica iloczynu ciągów jest równa  iloczynowi granic tych ciągów}
 
 
 
 \begin{theorem}
     
-    Jeżeli $\lim_{n\to\infty} x_n = x$ i $\lim_{n\to\infty} y_n = y$ \\
+    Jeżeli $\lim_{n\to\infty} x_n = x$ i $\lim_{n\to\infty} y_n = y$ 
      to $\lim_{n\to\infty} (x_{n}y_{n}) = xy$.
 
 \end{theorem}
+
+\subsection{Dowód, że $\lim_{n\to\infty} (x_{n} + y_{n}) = x + y$}
+
+Niech $x_{n} \;\; \textrm{oraz} \;\; y_{n}$ będą ciągami o wyrazach rzeczywistych  lub zespolonych.
+
+\begin{theorem}
+    
+    Jeżeli $\lim_{n\to\infty} x_n = x$ i $\lim_{n\to\infty} y_n = y$ 
+     to $\lim_{n\to\infty} (x_{n} + y_{n}) = x + y$.
+
+\end{theorem}
+
+
+\noindent
+Chcemy okazać, że dla dowolnej liczby rzeczywistej większej niż zero, istnieje jakaś liczba naturalna, taka, że dla $n$ równego bądź większego niż ta liczba, spełniona jest nierówność:
+
+\begin{equation*}
+    |(x_{n} + y_{n}) - (x + y)| < \textrm{Dowolna liczba rzeczywista większa od zera}
+\end{equation*}
+\noindent
+Niech $\epsilon > 0$ będzie ustaloną liczbą rzeczywistą. Przyjmijmy, że $\delta = \frac{\epsilon}{2}$. Wiemy, że $\delta > 0$. Z założeń wiemy, że oba ciągi są zbieżne, więc dla każdego z tych dwóch ciągów
+istnieją liczby naturalne $l, m \in \mathbb{N}$ takie że:
+
+
+\begin{equation*}
+    \bigwedge_{n \geq l} |x_{n} - x| < \delta 
+\end{equation*}
+
+\begin{equation*}
+    \bigwedge_{n \geq m} |y_{n} - y| < \delta 
+\end{equation*}
+Oznaczmy $n_0 = \max \{l, m\}$. $n_0$ jest liczbą, która gwarantuje nam, że gdy $n \geq n_0$, od tego miejsca te dwie nierówności
+są jednocześnie spełnione. Mamy wtedy:
+
+\begin{equation} \label{suma ciagow polaczona warunkiem i}
+    \bigwedge_{n \geq n_0} (|x_{n} - x| < \delta \wedge |y_{n} - y| < \delta)
+\end{equation}
+
+
+Z \ref{suma ciagow polaczona warunkiem i} uzyskujemy:
+
+\begin{equation} \label{mniejsze niz dwa delta}
+    \bigwedge_{n \geq n_0} |x_n - x| + |y_n - y| < 2 \delta
+\end{equation}
+
+Skorzystamy z nierówności trójkąta i rozwiniemy wyrażenie $|(x_{n} + y_{n}) - (x + y)|$:
+
+\begin{equation*}
+    |(x_{n} + y_{n}) - (x + y)| = |(x_{n} - x) + (y_{n} - y)| \leq |x_n - x| + |y_n - y| 
+\end{equation*}
+
+Widzimy, że dla dowolnego $n \geq n_0$:
+
+\begin{equation*}
+    |(x_{n} + y_{n}) - (x + y)| < 2 \delta = 2 \cdot \frac{\epsilon}{2} = \epsilon
+\end{equation*}
+
+\vspace{10mm}
+Dla dowolnego $\epsilon > 0$ istnieje takie $n_0$, że $\underset{n \geq n_0}{\bigwedge} |(x_{n} + y_{n}) - (x + y)| < \epsilon$. Zatem $x+y$
+jest granicą $(x_{n} + y_{n})$.
 
 \end{document}
