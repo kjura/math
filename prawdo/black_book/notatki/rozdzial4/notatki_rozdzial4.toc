@@ -1,0 +1,2 @@
+\contentsline {section}{\numberline {1}4.1 Definicja. Rozkład zmiennej losowej.}{2}{}%
+\contentsline {subsection}{\numberline {1.1}$[a,b] = \cap _{n=1}^{\infty }(a - \frac {1}{n}, b]$}{2}{}%
