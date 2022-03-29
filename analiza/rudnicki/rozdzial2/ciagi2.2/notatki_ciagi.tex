@@ -1,4 +1,3 @@
-%\documentclass[12pt, letterpaper]{article}
 \documentclass[a4paper,oneside,openright,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -107,5 +106,43 @@ Widzimy, że dla dowolnego $n \geq n_0$:
 \vspace{10mm}
 Dla dowolnego $\epsilon > 0$ istnieje takie $n_0$, że $\underset{n \geq n_0}{\bigwedge} |(x_{n} + y_{n}) - (x + y)| < \epsilon$. Zatem $x+y$
 jest granicą $(x_{n} + y_{n})$.
+
+
+\section{Ciągi liczb rzeczywistych}
+
+W tym rozdziale każdy rozważany ciąg jest o wyrazach rzeczywistych.
+
+\begin{theorem}
+    
+    Ciąg monotoniczny jest zbieżny wtedy i tylko wtedy, gdy jest ograniczony.
+
+\end{theorem}
+
+
+Każdy ciąg zbieżny jest ograniczony (np. Rudnicki Twierdzenie 3 Punkt 2.1.3). W jedną stronę dowód jest w takim razie gotowy.
+Pokażemy zatem, że ciąg który jest monotoniczny i ograniczony jest zbieżny.
+\vspace{10mm}
+
+
+\noindent
+Załóżmy, że ciąg $(x_n)$ jest nierosnący (ciąg nazywamy monotonicznym gdy jest niemalejący lub nierosnący) oraz, że jest ograniczony.
+Niech: 
+
+\begin{equation*}
+    A = \{ x_n : n \in \mathbb{N} \}.
+\end{equation*}
+
+
+\noindent
+Zauważmy, że $A$ jest zbiorem ograniczonym. Co to znaczy, że zbiór jest ograniczony? Mówimy, że zbiór $A$ jest ograniczony jeśli
+jest ograniczony z góry i z dołu. Mało pomocne, ale nie panikujmy!
+\vspace{10mm}
+
+Zbiór $A$ jest \emph{ograniczony z góry} gdy: $$\bigvee_{M \in \mathbb{R}}  \bigwedge_{x \in A} x \leq M$$.
+
+Zbiór $A$ jest \emph{ograniczony z dołu} gdy: $$\bigvee_{m \in \mathbb{R}}  \bigwedge_{x \in A} x \geq m$$.
+
+
+Wcześniej założyliśmy, że ciąg $(x_n)$ jest ograniczony. Niech $M > 0$ będzie liczbą, która dla dowolnego $n$ speł
 
 \end{document}
