@@ -144,7 +144,47 @@ Zbiór $A$ jest \emph{ograniczony z dołu} gdy: $$\bigvee_{m \in \mathbb{R}}  \b
 
 
 Wcześniej założyliśmy, że ciąg $(x_n)$ jest ograniczony. Wtedy istnieje liczba dodatnia ograniczająca wszystkie wyrazy tego ciągu. Niech $M > 0$ będzie taką liczbą, 
-która dla dowolnego $n$ spełnia nierówność $M \geq |x_n|$. Z tego wnioskujemy, że zbiór $A$ jest ograniczony z góry.
+która dla dowolnego $n$ spełnia nierówność $M \geq |x_n|$. Na mocy pewnej znanej własności dotyczącej wartości bezwzględnej (patrz Wikipedia angielska) mamy:
 
+
+\begin{equation*}
+    M \geq |x_n| \iff -M \leq x_n \leq M
+\end{equation*}
+
+\noindent
+Ciekawe spostrzeżenie jest takie, że przez założenie o ograniczoności ciągu, widzimy powyżej, że jeśli wrzucimy wyrazy tego ciągu do jakiegoś zbioru
+to ten zbiór będzie ograniczony. Jest nam to niezbędne do posłużenia się aksjomatem ciągłości. Wiemy wtedy, że zbiór $A$ ma kres dolny.
+Niech zatem $x = \inf A$. Z definicji kresu dolnego mamy wtedy:
+
+
+\begin{equation*}
+    \bigwedge_{n \in \mathbb{N}} x \leq x_n
+\end{equation*}
+
+oraz
+
+\begin{equation*}
+    \bigwedge_{\epsilon > 0} \bigvee_{x_{n_0} \in A} x_{n_0} < x + \epsilon
+\end{equation*}
+
+\noindent
+Teraz ważny krok, przypomnijmy, że założyliśmy, że nasz ciąg jest nierosnący. Czyli dla każdego $n \in \mathbb{N}$ $x_{n + 1} \leq x_n$.
+Na pierwszy rzut oka może się to nie wydawać oczywiste, ale wykorzystamy tę informację do obsadzenia "własnych" wskaźników.
+Prawdziwym jest, że dla $n \geq n_0$ mamy $x_n \leq x_{n_0}$. Dlaczego? Wyrazy ciągu wyglądają jakoś tak:
+
+
+\begin{equation*}
+    x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6} ...
+\end{equation*}
+
+
+\noindent
+Każdy kolejny wyraz ciągu, jest większy niż poprzedni, jeśli wiemy zatem z aksjomatu ciągłości o istnieniu liczby  $x_{n_0}$ to jest gdzieś ona w tym zbiorze wyrazów ciągu:
+
+\begin{equation*}
+    x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{n_0}, x_{8}, x_{9}, x_{10} ...
+\end{equation*}
+
+Czyli od pewnego indeksu wyrazy ciągu są mniejsze bądź równe
 
 \end{document}
