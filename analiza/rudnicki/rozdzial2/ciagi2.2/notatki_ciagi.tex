@@ -179,12 +179,57 @@ Prawdziwym jest, że dla $n \geq n_0$ mamy $x_n \leq x_{n_0}$. Dlaczego? Wyrazy 
 
 
 \noindent
-Każdy kolejny wyraz ciągu, jest większy niż poprzedni, jeśli wiemy zatem z aksjomatu ciągłości o istnieniu liczby  $x_{n_0}$ to jest gdzieś ona w tym zbiorze wyrazów ciągu:
+Każdy kolejny wyraz ciągu, jest mniejszy niż poprzedni, jeśli wiemy zatem z aksjomatu ciągłości o istnieniu liczby  $x_{n_0}$ to jest gdzieś ona w tym zbiorze wyrazów ciągu:
 
 \begin{equation*}
-    x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{n_0}, x_{8}, x_{9}, x_{10} ...
+    x_{1}, x_{2}, x_{3}, x_{4}, x_{5}, x_{6}, x_{7}, x_{8}, x_{9}, x_{10} ... , x_{n_0}, ...
 \end{equation*}
 
-Czyli od pewnego indeksu wyrazy ciągu są mniejsze bądź równe
+\noindent
+Czyli od pewnego indeksu wyrazy ciągu są mniejsze bądź równe niż poprzedni wyraz. Jeżeli np. $n_0 = 3$, to wyrazy z indeksem większym bądź równym niż $n = 3$ będa automatycznie mniejsze
+na mocy założenia o ciągu niemalejącym:
+
+\begin{equation*}
+    x_{1} \geq x_{2} \geq x_{n_0 = 3} \geq x_{4} \geq x_{5} \geq x_{6} \geq x_{7} \geq x_{8} ...
+\end{equation*}
+
+\vspace{10mm}
+\noindent
+W takim razie wykorzystamy tę informację do zapisania nierówności:
+
+\begin{equation*}
+    x \leq x_n \leq x_{n_0}  < x + \epsilon \quad \textrm{dla} \quad n \geq n_0
+\end{equation*}
+
+\noindent
+Z powyższego mamy:
+
+\begin{equation*}
+    x_n < x + \epsilon \quad \textrm{dla} \quad n \geq n_0
+\end{equation*}
+
+oraz
+
+\begin{equation*}
+    x - x_{n} \leq 0 < \epsilon \implies x - \epsilon  < x_{n}  \quad \textrm{dla} \quad n \geq n_0
+\end{equation*}
+
+
+\vspace{10mm}
+\noindent
+Z tego już łatwo korzystając z własności wartości bezwzględnej mamy:
+
+\begin{equation*}
+    x - \epsilon  < x_{n} < x + \epsilon \iff |x_{n} - x| < \epsilon \quad \textrm{dla} \quad n \geq n_0
+\end{equation*}
+
+
+\noindent
+Tak więc pokazaliśmy, że dla dowolnego $\epsilon > 0$, istnieje taka liczba (indeks po naszemu) $n_0$, że dla dowolnej liczby $n \geq n_0$
+spełniona jest nierówność łudząco przypominająca definicję granicy:
+
+$$  \bigwedge_{n \geq n_0} |x_{n} - x| < \epsilon ,$$
+
+tak więc ciąg monotoniczny ograniczony jest zbieżny do $x$.
 
 \end{document}
