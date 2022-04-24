@@ -63,7 +63,7 @@ Niech $x_{n} \;\; \textrm{oraz} \;\; y_{n}$ będą ciągami o wyrazach rzeczywis
 Chcemy okazać, że dla dowolnej liczby rzeczywistej większej niż zero, istnieje jakaś liczba naturalna, taka, że dla $n$ równego bądź większego niż ta liczba, spełniona jest nierówność:
 
 \begin{equation*}
-    |(x_{n} + y_{n}) - (x + y)| < \textrm{Dowolna liczba rzeczywista większa od zera}
+    |(x_{n} + y_{n}) - (x + y)| < \textrm{Dowolna ustalona liczba rzeczywista większa od zera}
 \end{equation*}
 \noindent
 Niech $\epsilon > 0$ będzie ustaloną liczbą rzeczywistą. Przyjmijmy, że $\delta = \frac{\epsilon}{2}$. Wiemy, że $\delta > 0$. Z założeń wiemy, że oba ciągi są zbieżne, więc dla każdego z tych dwóch ciągów
@@ -231,5 +231,55 @@ spełniona jest nierówność łudząco przypominająca definicję granicy:
 $$  \bigwedge_{n \geq n_0} |x_{n} - x| < \epsilon ,$$
 
 tak więc ciąg monotoniczny ograniczony jest zbieżny do $x$.
+
+\subsection{Granica $\lim_{n\to\infty} \frac{1}{n^\alpha} = 0$ gdy $\alpha > 0$}
+
+Sprawdzamy, że: $$\lim_{n\to\infty} \frac{1}{n^ \alpha} = 0 \ \textrm{dla} \ \alpha > 0$$.
+
+\vspace{10mm}
+
+Chcemy sprawdzić, że dla dowolnej liczby $\epsilon > 0$ istnieje takie $n_{0} \in \mathbb{N}$, że:
+
+
+\begin{equation*}
+    |\frac{1}{n^\alpha} - 0| < \epsilon \ \ \textrm{dla} \ \ n \geq n_0
+\end{equation*}
+
+\vspace{10mm}
+
+Jako, że wyrażenie $\frac{1}{n^\alpha}$ dla naszych warunków jest zawsze większe niż $0$, możemy opuścić wartość bezwzględną:
+
+\begin{equation*}
+    \frac{1}{n^\alpha} < \epsilon \ \ \textrm{dla} \ \ n \geq n_0
+\end{equation*}
+
+\vspace{10mm}
+
+Teraz, żeby pokazać, że istnieje liczba od której nierówność z epsilonem jest spełniona, przekształćmy nierówność do równoważnej postaci
+tak by $n$ było trochę bardziej "widoczne" tj. dla $n \geq n_0$:
+
+\begin{equation*}
+    \frac{1}{n^\alpha} < \epsilon \ \  / \cdot n^\alpha
+\end{equation*}
+
+\begin{equation*}
+    1 < \epsilon n^\alpha \ \  / \cdot \frac{1}{\epsilon}
+\end{equation*}
+
+\begin{equation*}
+    \frac{1}{\epsilon} < n^\alpha \ \  / \sqrt[\alpha]{}
+\end{equation*}
+
+\begin{equation*}
+    n > \big(\frac{1}{\epsilon}\big)^{\frac{1}{\alpha}}
+\end{equation*}
+
+
+Teraz, wiemy, że $\epsilon$ i $\alpha$ jest dowolną liczbą większą niż zero, to oznacza, że jak zostaną ustalone to będziemy mieli
+po prawej stronie jakąś liczbę. Zawsze możemy wskazać, liczbę naturalną większą niż ta liczba. Niech w takim razie $n_0$ będzie
+liczbą naturalną większą niż $\big(\frac{1}{\epsilon}\big)^{\frac{1}{\alpha}}$ tzn. $n_{0} > \big(\frac{1}{\epsilon}\big)^{\frac{1}{\alpha}}$.
+Wskazaliśmy teraz właśnie istnienie liczby, od której (aż wzwyż, czyli liczby powyżej $n_0$ też spełniają tę nierówność) nasza przekształcona nierówność
+jest spełniona. Ta nierówność jest oczywiście równoważna $|\frac{1}{n^\alpha} - 0| < \epsilon \ \ \textrm{dla} \ \ n \geq n_0$.
+Tak więc granicą dla ciągu $\frac{1}{n^{\alpha}}$ jest liczba $0$.
 
 \end{document}
