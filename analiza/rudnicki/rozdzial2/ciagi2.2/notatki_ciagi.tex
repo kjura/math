@@ -282,4 +282,55 @@ Wskazaliśmy teraz właśnie istnienie liczby, od której (aż wzwyż, czyli lic
 jest spełniona. Ta nierówność jest oczywiście równoważna $|\frac{1}{n^\alpha} - 0| < \epsilon \ \ \textrm{dla} \ \ n \geq n_0$.
 Tak więc granicą dla ciągu $\frac{1}{n^{\alpha}}$ jest liczba $0$.
 
+
+\subsection{Granica $\lim_{n\to\infty} a^{n} = 0,$ gdy $0 \leq a < 1$}
+
+
+Postępujemy podobnie jak w granicy ciągu $\frac{1}{n^{\alpha}}$. Chcemy sprawdzić, że $0$ jest granicą ciągu $a^n$ dla warunków $0 \leq a < 1$.
+W takim razie sprawdzamy, że dla dowolnej liczby $\epsilon > 0$, istnieje takie $n_0 \in \mathbb{N}$, że
+
+\begin{equation*}
+    |a^{n} - 0| < \epsilon \ \ \textrm{dla} \ \ n \geq n_0
+\end{equation*}
+
+
+\noindent
+Z podanych warunków, wiemy, że wyrażenie w środku wartości bezwzględnej nie będzie ujemne, możemy ją więc opuścić:
+
+\begin{equation*}
+    a^{n}  < \epsilon \ \ \textrm{dla} \ \ n \geq n_0
+\end{equation*}
+
+\noindent
+Ważne wtrącenie: Dla $a = 0$ ciąg jest stały o wyrazie $0$ już od pierwszego wyrazu, więc ma on granicę równą $0$. W dalszych rozważaniach ograniczmy więc $a$ do przypadku $0 < a < 1$ (pozwoli nam to swobodnie używać
+logarytmu, jako, że gdy przyjmiemy za podstawę $a$ mógłby być 'kłopot' z $\epsilon$ w nierówności, z powodu zera w podstawie).
+Skorzystajmy z własności logarytmu ($\log _{a} a^b = b$) i dokonajmy przekształcenia powyższej nierówności, aby $n$ było bardziej widoczne, oczywiście
+nierówność ta będzie równoważna pierwotnej, zatem dla $n \geq n_0$ zachodzi (Uwaga na zmianę znaku w nierówności!):
+
+\begin{equation*}
+    a^{n}  < \epsilon \ \ / \ \ \log _{a}
+\end{equation*}
+
+\begin{equation*}
+    \log _{a} a^{n} = n > \log _{a} \epsilon 
+\end{equation*}
+
+\noindent
+Teraz, gdy $\epsilon$ oraz $a$ zostaną ustalone, po prawej stronie powyższej nierówności mamy jakąś skończoną liczbę.
+Niech zatem $n_0$ będzie liczbą naturalną taką, że $n_0 > \log _{a} \epsilon$. Właśnie pokazaliśmy, że istnieje liczba (i jako, że jest to liczba naturalna jej następnik etc.) od której
+nierówność $n > \log _{a} \epsilon$ jest spełniona, która jest równoważna pierwotnej nierówności. Pokazaliśmy zatem, że dla dowolnego $\epsilon > 0$ istnieje liczba naturalna $n_0$ która dla każdego $n \geq n_0$
+spełnia:
+
+
+\begin{equation*}
+    |a^{n} - 0| < \epsilon
+\end{equation*}
+
+\vspace{10mm}
+
+
+więc $\lim_{n\to\infty} a^{n} = 0,$ gdy $0 \leq a < 1$.
+
+
+
 \end{document}
