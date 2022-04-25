@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amsfonts}
 %\usepackage[a4paper, total={6in, 8in}]{geometry}
 
@@ -25,7 +26,7 @@
 \newtheorem{theorem}{Twierdzenie}
 
 
-
+\renewcommand*{\proofname}{\textbf{Dowód}}
 \numberwithin{equation}{section}
 
 \begin{document}
@@ -43,12 +44,40 @@
 \subsection{Przykład indukcji - nierówność Bernoulliego}
 
 \begin{theorem}
-    Jeśli $x > 1$ oraz $x \neq 0$ i $n \geq 2$ to:
+    Jeśli $x > 1$ oraz $x \neq 0$ i $n \geq 2$, to:
     \begin{equation*}
-        (1 + x)^{n} > 1 + nx
+        (1 + x)^{n} > 1 + nx.
     \end{equation*}
 \end{theorem}
 
+\begin{description}
+    \item[Baza indukcji:] Dla $n = 2$ sprawdzamy, czy nierówność Bernoulliego jest prawdziwa. Mamy zatem:
+    
+    \begin{equation*}
+        (1 + x)^{2} > 1 + 2x
+    \end{equation*}
+    \begin{equation*}
+        1 + 2x + x^{2} > 1 + 2x \ / ()
+    \end{equation*}
+   
+    \item[Vegetable] Plant
+   
+    \item[Mineral] Natural inorganic substance
+\end{description}
+
+
+
+% TODO: Pobawic się srodowiskiem proof zeby zrobic indukcje
+%\begin{proof}
+%   
+%    \begin{description}
+%        \item[Animal] Living being
+%      
+%        \item[Vegetable] Plant
+%       
+%        \item[Mineral] Natural inorganic substance
+%      \end{description}
+%\end{proof}
 
 \section{Własności ciągów liczbowych}
 \subsection{Granica iloczynu ciągów jest równa  iloczynowi granic tych ciągów}
