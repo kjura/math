@@ -44,7 +44,7 @@
 \subsection{Przykład indukcji - nierówność Bernoulliego}
 
 \begin{theorem}
-    Jeśli $x > 1$ oraz $x \neq 0$ i $n \geq 2$, to:
+    Jeśli $x > -1$ oraz $x \neq 0$ i $n \geq 2$, to:
     \begin{equation*}
         (1 + x)^{n} > 1 + nx.
     \end{equation*}
@@ -57,12 +57,34 @@
         (1 + x)^{2} > 1 + 2x
     \end{equation*}
     \begin{equation*}
-        1 + 2x + x^{2} > 1 + 2x \ / ()
+        1 + 2x + x^{2} > 1 + 2x \ \ / \ +(-1 -2x)
     \end{equation*}
+    \begin{equation*}
+        x^2 > 0
+    \end{equation*}
+    Z założenia wiemy, że $x \neq 0$, kwadrat liczby rzeczywistej jest zawsze większy niż $0$, więc nierówność jest spełniona.
+    \item[Krok indukcyjny] Zakładamy, że $(1 + x)^{n} > 1 + nx$ jest spełnione dla pewnego $n \geq 2$.
    
-    \item[Vegetable] Plant
-   
-    \item[Mineral] Natural inorganic substance
+    \item[Dowodzimy że nierówność jest spełniona dla $n + 1$:] Dowodzimy, że $(1 + x)^{n + 1} > 1 + (n + 1)x$. 
+    \begin{equation*}
+        (1 + x)^{n + 1} = (1 + x)^{n} (1 + x)^{1}
+    \end{equation*}
+
+    Zauważmy, że możemy powyższą informację wykorzystać do odpowiedniego dobrania nierówności, używając nierówności z kroku indukcyjnego (gdy opuścimy
+    wyrażenie $(1 + x)$ wracamy po prostu do nierówności z kroku indukcyjnego):
+    \begin{equation*}
+        (1 + x)^{n + 1} = (1 + x)^{n} (1 + x)^{1} > (1 + nx)(1 + x) = 1 + x + nx + nx^2 = 1 + (n + 1)x + nx^2
+    \end{equation*}
+    \begin{equation*}
+        (1 + x)^{n + 1} > 1 + (n + 1)x + nx^2 > 1 + (n + 1)x
+    \end{equation*}
+    Jeżeli dodamy "coś" (u nas $nx^2$) do $1 + (n + 1)x$ to i tak widzimy, że $(1 + x)^{n + 1}$ nadal jest większe. Jako, że $x \neq 0$
+    (ważne, gdyby było inaczej, nierówność ostra nie byłaby spełniona) to wyrażenie $nx^2$ jest dodatnie. Tym bardziej $(1 + x)^{n + 1}$ jest większe od wyrażenia bez $nx^2$.
+    Z tego można wywnioskować końcowy wniosek, który na mocy zasady indukcji pokazuje, że dla $n \geq 2$ nierówność Bernoulliego jest spełniona:
+
+    \begin{equation*}
+        (1 + x)^{n + 1} > 1 + (n + 1)x
+    \end{equation*}
 \end{description}
 
 
