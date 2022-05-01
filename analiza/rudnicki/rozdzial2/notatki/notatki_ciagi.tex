@@ -456,10 +456,43 @@ Ustawmy w takim razie następującą nierówność:
 \end{equation*}
 
 \noindent
-$lim_{n\to\infty} 0$ wynosi $0$ (na mocy twierdzenia o granicy ciągu stałego). Granica $lim_{n\to\infty} \frac{a - 1}{n}$ jest równa:
+$\lim_{n\to\infty} 0$ wynosi $0$ (na mocy twierdzenia o granicy ciągu stałego). Granica $lim_{n\to\infty} \frac{a - 1}{n}$ jest równa:
 
 \begin{equation*}
-    \lim_{n\to\infty} \frac{a - 1}{n} = \lim_{n\to\infty} (a-1) \cdot \frac{1}{n} = \lim_{n\to\infty} (a-1) \cdot  \lim_{n\to\infty} \frac{1}{n} = \lim_{n\to\infty} (a-1) \cdot 0 = 0
+    \lim_{n\to\infty} \frac{a - 1}{n} = \lim_{n\to\infty} (a-1) \cdot \frac{1}{n} = \lim_{n\to\infty} (a-1) \cdot  \lim_{n\to\infty} \frac{1}{n} = \big(\lim_{n\to\infty} (a-1)\big) \cdot 0 = 0
+\end{equation*}
+
+\noindent
+Z twierdzenia o trzech ciągach mamy zatem $\lim_{n\to\infty} b_{n} = 0$. Rezultatu tego użyjemy w wyrażeniu opisującym $b_{n}$:
+
+\begin{equation*}
+    \lim_{n\to\infty} b_{n} = \lim_{n\to\infty}(\sqrt[n]{a}) - \lim_{n\to\infty}(1)
+\end{equation*}
+
+\begin{equation*}
+    0 = \lim_{n\to\infty}(\sqrt[n]{a}) - 1 \ \ / \ \ +1
+\end{equation*}
+
+\begin{equation*}
+    1 = \lim_{n\to\infty}(\sqrt[n]{a})
+\end{equation*}
+
+Dla $a \geq 1$ udowodniliśmy, że granica wynosi $1$. Pozostaje sprawdzić przypadek dla $a \in (0, 1)$. Ale najpierw pokażemy, że wyrażenie $\sqrt[n]{a}$ da się przedstawić trochę inaczej.
+Będzie to kluczowe dla dostrzeżenia czemu granica dla tego przypadku również wynosi $1$.
+
+\begin{equation*}
+    \sqrt[n]{a} = \sqrt[n]{\frac{1}{\frac{1}{a}}} = \sqrt[n]{(\frac{1}{a})^{-1}} = (\frac{1}{a})^{\frac{-1}{n}} = \frac{1}{(\frac{1}{a})^{\frac{1}{n}}} = \frac{1}{\sqrt[n]{\frac{1}{a}}}
+\end{equation*}
+
+\begin{equation*}
+    \lim_{n\to\infty}\sqrt[n]{a} = \lim_{n\to\infty}\frac{1}{\sqrt[n]{\frac{1}{a}}} 
+\end{equation*}
+
+Ważne spostrzeżenie, $a \in (0, 1)$, powyżej udowodniliśmy, że granica z $\sqrt[n]{a}$ wynosi $1$ gdy $a \geq 1$. Oznacza to dla nas tyle, że w wyrażeniu pod pierwiastkiem jest ułamek, którego wynikiem
+jest liczba większa niż $1$. Wiemy zatem jaki jest wynik dla tej granicy, znamy granicę licznika oraz mianownika, separując:
+
+\begin{equation*}
+    \lim_{n\to\infty}\sqrt[n]{a} = \frac{\lim_{n\to\infty} 1}{\lim_{n\to\infty} \sqrt[n]{\frac{1}{a}}} = \frac{1}{1} = 1
 \end{equation*}
 
 \end{document}
