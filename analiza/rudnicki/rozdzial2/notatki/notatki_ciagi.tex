@@ -506,7 +506,51 @@ Chcemy sprawdzić, że $\lim_{n\to\infty} \sqrt[n]{n} = 1$. Przyjmijmy zatem, ż
     b_{n} = \sqrt[n]{n} - 1 \geq 0
 \end{equation*}
 
-Wiemy, że $b_{n}$ jest większe bądź równe $0$, dlatego, że człon z pierwiastkiem przyjmuje tylko i wyłącznie liczby naturalne,
+\noindent
+Skąd wiemy, że $b_{n} \geq 0$? Po pierwsze, wiemy na pewno, że $b_{n}$ może przyjąć $0$ dla $n = 1$ ($b_{n=1} = \sqrt[1]{1} - 1 = 0$). W takim razie co by się stało, gdyby $b_{n} < 0$? Otóż:
 
+\begin{equation*}
+    b_{n} = \sqrt[n]{n} - 1 < 0
+\end{equation*}
+\begin{equation*}
+    \sqrt[n]{n} - 1 < 0 \ \ / \ \ +1
+\end{equation*}
+\begin{equation*}
+    \sqrt[n]{n} < 1 \ \ / \ \ (\cdot)^n
+\end{equation*}
+\begin{equation*}
+    (\sqrt[n]{n})^{n} = (n^{\frac{1}{n}})^n = n^1 = n < 1^n = 1
+\end{equation*}
+
+\begin{center}
+    SPRZECZNOŚĆ! Żadna liczba $n$ nie będzie mniejsza niż $1$.
+\end{center}
+
+\noindent
+Wiemy już dlaczego na pewno $b_{n} \geq 0$. Wyliczmy, $n$:
+
+\begin{equation*}
+    1 + b_{n} = \sqrt[n]{n} \ \ / \ \ (\cdot)^n
+\end{equation*}
+\begin{equation*}
+    (1 + b_{n})^n = n 
+\end{equation*}
+
+\noindent
+Skorzystamy teraz ze wzoru Newtona na potęgę dwumianu (Wikipedia nazywa ten szczególny przypadek Szeregiem Newton'a? Sprawdzić). Rozwińmy wyrażenie $(1 + b_{n})^n$ tymże wzorem:
+
+\begin{equation*}
+    (1 + b_{n})^n = \sum_{k=0}^{n} {n \choose k} b_{n}^{k} = {n \choose 0}b_{n}^{0} + {n \choose 1}b_{n}^{1} + {n \choose 2}b_{n}^{2} + \mbox{...}
+\end{equation*}
+\begin{equation*}
+    \sum_{k=0}^{n} {n \choose k} b_{n}^{k} = 1 + {n \choose 1}b_{n} + {n \choose 2}b_{n}^{2} + \mbox{...}
+\end{equation*}
+
+\noindent
+Mamy w takim razie dla $n \geq 2$:
+
+\begin{equation*}
+    (1 + b_{n})^n \geq 1 + {n \choose 1}b_{n} + {n \choose 2}b_{n}^{2} > 1 + {n \choose 2}b_{n}^{2}
+\end{equation*}
 
 \end{document}
