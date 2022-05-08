@@ -301,7 +301,7 @@ $$  \bigwedge_{n \geq n_0} |x_{n} - x| < \epsilon ,$$
 
 tak więc ciąg monotoniczny ograniczony jest zbieżny do $x$.
 
-\subsection{Granica $\lim_{n\to\infty} \frac{1}{n^\alpha} = 0$ gdy $\alpha > 0$}
+\subsection{Granica $\lim_{n\to\infty} \frac{1}{n^\alpha} = 0$ gdy $\alpha > 0$} \label{jedenNadEn}
 
 Sprawdzamy, że: $$\lim_{n\to\infty} \frac{1}{n^ \alpha} = 0 \ \textrm{dla} \ \alpha > 0$$.
 
@@ -550,7 +550,61 @@ Skorzystamy teraz ze wzoru Newtona na potęgę dwumianu (Wikipedia nazywa ten sz
 Mamy w takim razie dla $n \geq 2$:
 
 \begin{equation*}
-    (1 + b_{n})^n \geq 1 + {n \choose 1}b_{n} + {n \choose 2}b_{n}^{2} > 1 + {n \choose 2}b_{n}^{2}
+    (1 + b_{n})^n \geq 1 + {n \choose 1}b_{n} + {n \choose 2}b_{n}^{2} \geq 1 + {n \choose 2}b_{n}^{2}
+\end{equation*}
+\begin{equation*}
+    (1 + b_{n})^n \geq 1 + {n \choose 2}b_{n}^{2} \ \ / \ \ -1
+\end{equation*}
+\begin{equation*}
+    (1 + b_{n})^n - 1 = n - 1 \geq {n \choose 2}b_{n}^{2}  \ \ / \ \ (:){n \choose 2}
+\end{equation*}
+\begin{equation*}
+    \frac{(n - 1)}{{n \choose 2}} \geq b_{n}^{2} 
+\end{equation*}
+\begin{equation*}
+    \frac{(n - 1)}{{n \choose 2}} \geq b_{n}^{2} 
+\end{equation*}
+\begin{equation*}
+    \frac{(n - 1)}{\frac{n!}{2!(n-2)!}} \geq b_{n}^{2} 
+\end{equation*}
+
+
+Zauważmy, że $\frac{n!}{2!(n-2)!}$ da się zapisać w sposób wygodniejszy do uproszczenia powyższej nierówności:
+
+\begin{equation*}
+    \frac{n!}{2!(n-2)!} = \frac{n(n-1)(n-2)!}{(n-2)!2!} =  \frac{n(n-1)}{2}
+\end{equation*}
+
+Z tego mamy zatem:
+
+\begin{equation*}
+    \frac{(n - 1)}{\frac{n!}{2!(n-2)!}} = \frac{n-1}{\frac{n(n-1)}{2}} = (n-1)\frac{2}{n(n-1)} = \frac{2}{n} \geq b_{n}^{2} \ \ / \ \ \sqrt[2]{}
+\end{equation*}
+\begin{equation*}
+    \frac{\sqrt[]{2}}{\sqrt[]{n}} \geq b_{n}
+\end{equation*}
+
+Teraz, pamiętając jak na samym początku pokazaliśmy, że $b_{n} \geq 0$ stwórzmy na tej kanwie bazę pod twierdzenie o trzech ciągach:
+
+\begin{equation*}
+    0 \leq b_{n} \leq \frac{\sqrt[]{2}}{\sqrt[]{n}}
+\end{equation*}
+
+Z \ref{jedenNadEn} możemy wywnioskować, że (hint: zamień pierwiastek na równoważną wersję z potęgą i wyciąg stałą przed granicę, stałą jest pierwiastek nad 2):
+\begin{equation*}
+    \lim_{n\to\infty} \frac{\sqrt[]{2}}{\sqrt[]{n}} = 0
+\end{equation*}
+
+Podobnie granica ciągu składającego się z samych $0$ jest równa zero. Z twierdzenia o trzech ciągach wnioskujemy, że:
+
+\begin{equation*}
+    \lim_{n\to\infty} b_{n} = 0
+\end{equation*}
+
+Podsumowując:
+
+\begin{equation*}
+    \lim_{n\to\infty} \sqrt[n]{n} = \lim_{n\to\infty} (1 + b_{n}) = 1 + 0 = 1
 \end{equation*}
 
 \end{document}
