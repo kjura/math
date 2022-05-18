@@ -659,7 +659,32 @@ Teraz, wiemy, że granica z ciągu $0$ jest równa zera (ciąg stały). A co z g
 $c$ jest stałą wyciągnijmy ją zatem przed granicę:
 
 \begin{equation*}
-    \lim_{n\to\infty} \frac{2}{(n-1)c^2} = \frac{2}{c^2} \lim_{n\to\infty} \frac{1}{n-1}
+    \lim_{n\to\infty} \frac{2}{(n-1)c^2} = \frac{2}{c^2} \lim_{n\to\infty} \frac{1}{n-1} = \frac{2}{c^2} \cdot 0
 \end{equation*}
+
+Korzystając zatem z twierdzenia o trzech ciągach:
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{n}{b^n} = 0 \ \ \ \mbox{Dla} \ \ \ b > 1.
+\end{equation*}
+
+\noindent
+Wróćmy teraz do głównej granicy którą zamierzaliśmy sprawdzić. Wiemy, że $k \in \mathbb{R}$. Zatem istnieje liczba naturalna większa niż $k$, niech będzie to $p$, $p > k$.
+Niech $b = \sqrt[p]{a}$. Zauważmy, że jeśli najpierw podniesiemy $b$ do potęgi $p$ a później do $n$ to $a^n = b^{pn}$ Połóżmy pewną nierówność jako grunt pod użycie twierdzenia o trzech ciągach:
+
+\begin{equation*}
+    0 \leq \frac{n^k}{a^n} \leq \frac{n^p}{a^n} = \frac{n^p}{b^{pn}} = \Big(\frac{n}{b^n}\Big)^p
+\end{equation*}
+
+\noindent
+Wiemy, że dla potęgi naturalnej $p$ i $\lim_{n\to\infty} x_{n} = x$ mamy $\lim_{n\to\infty} x_{n}^p = x^p$. Z tego zatem mamy, że:
+
+\begin{equation*}
+    \lim_{n\to\infty} \Big(\frac{n}{b^n}\Big)^p = 0^p = 0
+\end{equation*}
+
+\noindent
+Z twierdzenia o trzech ciągach dostajemy granicę równą $0$ dla ciągu $\frac{n^k}{a^n}$ o ile $a > 1$ a $k \in \mathbb{R}$.
+
 
 \end{document}
