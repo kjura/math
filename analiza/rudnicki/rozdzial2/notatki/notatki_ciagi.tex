@@ -687,4 +687,26 @@ Wiemy, że dla potęgi naturalnej $p$ i $\lim_{n\to\infty} x_{n} = x$ mamy $\lim
 Z twierdzenia o trzech ciągach dostajemy granicę równą $0$ dla ciągu $\frac{n^k}{a^n}$ o ile $a > 1$ a $k \in \mathbb{R}$.
 
 
+\subsection{Przykłady jak liczyć granice ciągów - Rudnicki}
+
+\subsubsection{Granica z ilorazu wielomianu i.e $\frac{P(n)}{n^k}$}
+
+
+Niech $P$ będzie wielomianem stopnia $k$, $P(n) = a_{0} + a_{1}n + \mbox{...} + a_{k}n^{k}$, wtedy:
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{P(n)}{n^k} = \lim_{n\to\infty} \frac{a_{0} + a_{1}n + \mbox{...} + a_{k}n^{k}}{n^k} = \lim_{n\to\infty} \frac{a_{0}}{n^k} + \frac{a_{1}n}{n^k} + \mbox{...} + \frac{a_{k}n^{k}}{n^k} =
+\end{equation*}
+
+\begin{equation*}
+    = \lim_{n\to\infty} a_{0}n^{-k} + a_{1}n^{1-k} + a_{2}n^{2-k} + \mbox{...} + a_{k} 
+\end{equation*}
+
+Warto zauważyć, że możemy użyć twierdzenia \ref{jedenNadEn} aby obliczyć tę granicę. $k$ jest stopniem wielomianu i jest to nieujemna liczba całkowita, zatem każde $n$ ma wykładnik ujemny poza ostatnim, ($k > k - 1 > k - 2$ etc.).
+Wobec tego biorąc odwrotności z tych wyrażeń (pamiętamy, potęga ujemna) mamy po prostu sumowanie zer AŻ do $a_k$ kiedy to $n^k$ się skraca do jedności:
+
+\begin{equation*}
+    \lim_{n\to\infty} a_{0}n^{-k} + a_{1}n^{1-k} + a_{2}n^{2-k} + \mbox{...} + a_{k} = 0 + 0 + 0 + \mbox{...} + a_k = a_k.
+\end{equation*}
+
 \end{document}
