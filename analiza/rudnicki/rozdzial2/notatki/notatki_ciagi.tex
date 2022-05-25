@@ -735,11 +735,61 @@ Wobec tego biorąc odwrotności z tych wyrażeń (pamiętamy, potęga ujemna) ma
 
 Niech $P$ będzie wielomianem stopnia $k$, $P(n) = a_{0} + a_{1}n + \mbox{...} + a_{k}n^{k}$ oraz $Q(n) = b_{0} + b_{1}n + \mbox{...} + b_{l}n^{l}$, chcemy oczywiście aby współczynniki przy najwyższch stopniach nie sprawiały, że 
 będziemy dzielić przez zero przy liczeniu granicy, więc również $a_k \neq 0$ oraz $b_l \neq 0$ i (kluczowe) $k \leq l$. Użyjemy poprzedniego przykładu i będziemy sprytni. Rozbijemy ułamek wielomianów, tak
-aby dzielić przez $n^k$ oraz przenieść $Q(n)$ 
+aby dzielić $P(n)$ przez $n^k$ i dzielić $n^l$ przez $Q(n)$. Całość konstrukcji musi być oczywiście równa $\frac{P(n)}{Q(n)}$, dlatego  pomnożymy wszystko przez $n^{k-l}$:
 
 \begin{equation*}
-    \lim_{n\to\infty} \frac{P(n)}{Q(n)} = \lim_{n\to\infty} \frac{P(n)}{}
+    \lim_{n\to\infty} \frac{P(n)}{Q(n)} = \lim_{n\to\infty} \frac{P(n)}{n^k} \frac{n^l}{Q(n)} \cdot n^{k-l}
 \end{equation*}
 
+Korzystamy ze wzoru na arytmetykę granic przy iloczynie. $\frac{P(n)}{n^k}$ wiemy z przykładu wcześniej, że granica z tego wyrażenia to $a_k$.
+\vspace{5mm}
+Teraz poczynimy uwagę, wiemy, że: 
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{Q(n)}{n^l} = b_l
+\end{equation*}
+
+Jest nam również znany wzór na granicę ciągu do ujemnej potęgi naturalnej, tj:
+
+\begin{equation*}
+    \lim_{n\to\infty} (\frac{Q(n)}{n^l})^{-1} = b_l^{-1} = \frac{1}{b_l}
+\end{equation*}
+
+Wzór oczywiście działa, bo "oryginalna" granica wynosi $b_l$, a ciąg dla dowolnego $\mathbb{N}$ nie jest równy zero. Mamy wtedy prostą drogę do podsumowania granicy ilorazu wielomianów.
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{P(n)}{Q(n)} = \lim_{n\to\infty} \frac{P(n)}{n^k} \frac{n^l}{Q(n)} \cdot n^{k-l} = \frac{a_k}{b_l} \cdot \lim_{n\to\infty} n^{k-l}.
+\end{equation*}
+
+\vspace{5mm}
+
+Teraz, zastanówmy się jaka może być granica z $\lim_{n\to\infty} n^{k-l}$. Z naszych założeń, $k = l$ albo $k < l$. Gdy $k=l$, sprawa jest prosta, mamy po prostu:
+
+\begin{equation*}
+    \lim_{n\to\infty} n^{l-l} = \lim_{n\to\infty} n^{0} = \lim_{n\to\infty} 1 = 1
+\end{equation*}
+
+I wtedy: 
+
+\begin{equation*}
+    \frac{a_k}{b_l} \cdot \lim_{n\to\infty} n^{k-l} = \frac{a_k}{b_l} \cdot 1 = \frac{a_k}{b_l}.
+\end{equation*}
+
+
+Gdy $k < l$ mamy, ze wzoru \ref{jedenNadEn}:
+
+\begin{equation*}
+    \frac{a_k}{b_l} \cdot \lim_{n\to\infty} n^{k-l} = \frac{a_k}{b_l} \cdot 0 = 0
+\end{equation*}
+
+Podsumowując:
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{P(n)}{Q(n)} =
+    \begin{cases}
+        \frac{a_k}{b_l}, \ \ \mbox{gdy} \ \ k = l, \\
+        0, \ \ \mbox{gdy} \ \ k < l.
+    \end{cases}
+\end{equation*}
 
 \end{document}
