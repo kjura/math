@@ -610,6 +610,7 @@ Podsumowując:
 \subsection{Granica $\lim_{n\to\infty} \frac{n^k}{a^n} = 0$, dla $a > 1$, $k \in \mathbb{R}$}
 
 
+
 Najpierw sprawdzimy, że $\lim_{n\to\infty} \frac{n}{b^n} = 0$ dla $b > 1$. Niech $b = 1 + c$. Wtedy:
 
 \begin{equation*}
@@ -686,6 +687,27 @@ Wiemy, że dla potęgi naturalnej $p$ i $\lim_{n\to\infty} x_{n} = x$ mamy $\lim
 \noindent
 Z twierdzenia o trzech ciągach dostajemy granicę równą $0$ dla ciągu $\frac{n^k}{a^n}$ o ile $a > 1$ a $k \in \mathbb{R}$.
 
+\subsection{Granica z $\lim_{n\to\infty} x_n^p = 0^p = 0$ gdy $x_n \xrightarrow[n \to \infty]{} 0$}
+
+
+Niech $x_n$ będzie ciągiem liczb rzeczywistych takim, że  $x_n \geq 0$ dla $n \in \mathbb{N}$. Niech $p > 0$.  
+Jeśli $\lim_{n\to\infty} x_n = 0$ to wtedy $\lim_{n\to\infty} x_n^p = 0$.
+
+\vspace{10mm}
+\noindent
+
+Ustalmy $\epsilon > 0$. Wówczas możemy przyjąć, że $\delta = \epsilon^{1/p}$. Zatem $\delta > 0$ i istnieje liczba $n_0$ która dla $n \geq n_0$
+spełnia następującą nierówność:
+
+\begin{equation*}
+    |x_n - 0| = x_n < \delta \ \ \ / \ \ (.)^{(p)}
+\end{equation*}
+Przy potęgowaniu znaku nierówności nie musimy zmieniać, ponieważ po lewej i po prawej nie będzie wartości ujemnych:
+\begin{equation*}
+    x_n^p < \delta^p = \Big(\epsilon^{1/p}\Big)^p = \epsilon
+\end{equation*}
+Zatem dla dowolnego $\epsilon$ istnieje $n_0$, które dla $n \geq n_0$ spełnia $|x_{n}^{p} - 0| < \epsilon$.
+
 
 \subsection{Przykłady jak liczyć granice ciągów - Rudnicki}
 
@@ -708,5 +730,7 @@ Wobec tego biorąc odwrotności z tych wyrażeń (pamiętamy, potęga ujemna) ma
 \begin{equation*}
     \lim_{n\to\infty} a_{0}n^{-k} + a_{1}n^{1-k} + a_{2}n^{2-k} + \mbox{...} + a_{k} = 0 + 0 + 0 + \mbox{...} + a_k = a_k.
 \end{equation*}
+
+
 
 \end{document}
