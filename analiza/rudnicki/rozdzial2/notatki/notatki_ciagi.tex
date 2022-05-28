@@ -792,4 +792,21 @@ Podsumowując:
     \end{cases}
 \end{equation*}
 
+\subsubsection{Przykład 3 Rudnicki, 2.2 Ciągi}
+
+Obliczymy granicę ciągu:
+
+\begin{equation*}
+    a_n = \frac{\sqrt[3]{n^2} \sin n!}{n+1}
+\end{equation*}
+
+
+Rozbijmy ciąg $(a_n)$ na iloczyn dwóch ciągów. Niech $x_n = \frac{n^{2/3}}{(n+1)}$ oraz $y_n = \sin n!$. Wtedy $a_n = x_n \cdot y_n$. Zauważymy, że ciąg $(y_n)$ jest ograniczony.
+Funkcja $\sin(\cdot)$ przyjmuje wartości na przedziale $[-1, 1]$. Zatem dla dowolnego $n \in \mathbb{N}$, $|y_n| \leq 1$, tzn. $(y_n)$ jest ograniczony. Teraz stwórzmy nierówność jako podstawa pod użycie
+twierdzenia o trzech ciągach:
+
+\begin{equation*}
+    0 \leq x_n \leq \frac{1}{n^{1/3}}
+\end{equation*}
+
 \end{document}
