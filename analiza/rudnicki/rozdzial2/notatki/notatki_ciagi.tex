@@ -809,4 +809,30 @@ twierdzenia o trzech ciągach:
     0 \leq x_n \leq \frac{1}{n^{1/3}}
 \end{equation*}
 
+Dobrym pytaniem byłoby teraz: "A skąd wiadomo w ogóle że to działa?". Kolejnym pytaniem: "Jaki właściwie był proces myślowy, aby to oszacować?". Widzimy, że w mianowniku ciągu $(x_n)$ jest $(n+1)$.
+Wiemy, też, że przy takich samych licznikach, ułamek z mniejszym mianownikiem jest większy, zapiszmy zatem:
+
+\begin{equation*}
+    \frac{1}{n+1} \leq \frac{1}{n}
+\end{equation*}
+
+Przemnóżmy obie strone przez $n^{2/3}$:
+
+\begin{equation*}
+    x_n = \frac{n^{2/3}}{n+1} \leq \frac{n^{2/3}}{n} = n^{-1/3} = \frac{1}{n^{1/3}}.
+\end{equation*}
+
+Granica z $0$ to $0$, $\lim_{n\to\infty} \frac{1}{n^{1/3}}$ równa się $0$ (wzór \ref{jedenNadEn}). Zatem na mocy twierdzenia o trzech ciągach:
+
+\begin{equation*}
+    \lim_{n\to\infty} x_n = 0
+\end{equation*}
+
+\noindent
+A na mocy twierdzenia o iloczynie granic ciągu ograniczonego oraz ciągu który jest zbieżny do zera uzyskujemy:
+
+\begin{equation*}
+    \lim_{n\to\infty} a_n = \lim_{n\to\infty} x_n \cdot y_n =\lim_{n\to\infty} \frac{\sqrt[3]{n^2} \sin n!}{n+1} = 0
+\end{equation*}
+
 \end{document}
