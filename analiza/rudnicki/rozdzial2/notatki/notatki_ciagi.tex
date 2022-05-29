@@ -907,4 +907,26 @@ Ze wzoru w \ref{RudnickiWzor16Ciagi}:
 \vspace{10mm}
 Zatem ostatecznie granica z $\lim_{n\to\infty} \sqrt[n]{2^{n} + 3^n} = 3$.
 
+\subsubsection{Przykład 5 Rudnicki, 2.2 ciągi}
+
+Obliczymy granicę: 
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{3^{n}n + 4^{n}}{5 + 2^{n} + 4^{n + 1}}
+\end{equation*}
+\noindent
+Podzielmy ułamek przez $4^n$:
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{(3^{n}n + 4^{n}) / 4^n}{(5 + 2^{n} + 4^{n + 1}) / 4^n}
+\end{equation*}
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{\frac{3^{n}n}{4^n} + \frac{4^n}{4^n}}{\frac{5}{4^n} + \frac{2^n}{4^n} + \frac{4^{n+1}}{4^n}}
+\end{equation*}
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{n \cdot \Big(\frac{3}{4} \Big)^{n} + 1}{\frac{5}{4^n} + \frac{1}{2^n} + 4}
+\end{equation*}
+
 \end{document}
