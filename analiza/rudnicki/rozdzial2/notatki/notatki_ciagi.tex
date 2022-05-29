@@ -352,7 +352,7 @@ jest spełniona. Ta nierówność jest oczywiście równoważna $|\frac{1}{n^\al
 Tak więc granicą dla ciągu $\frac{1}{n^{\alpha}}$ jest liczba $0$.
 
 
-\subsection{Granica $\lim_{n\to\infty} a^{n} = 0,$ gdy $0 \leq a < 1$}
+\subsection{Granica $\lim_{n\to\infty} a^{n} = 0,$ gdy $0 \leq a < 1$} \label{RudnickiWzor15}
 
 
 Postępujemy podobnie jak w granicy ciągu $\frac{1}{n^{\alpha}}$. Chcemy sprawdzić, że $0$ jest granicą ciągu $a^n$ dla warunków $0 \leq a < 1$.
@@ -401,7 +401,7 @@ spełnia:
 więc $\lim_{n\to\infty} a^{n} = 0,$ gdy $0 \leq a < 1$.
 
 
-\subsection{Granica $\lim_{n\to\infty} \sqrt[n]{a} = 1$ gdy $a > 0$}
+\subsection{Granica $\lim_{n\to\infty} \sqrt[n]{a} = 1$ gdy $a > 0$} \label{RudnickiWzor16}
 
 Mamy udowodnić, że granica z $\lim_{n\to\infty} \sqrt[n]{a}$ gdy $a > 0$ wynosi $1$. Na starcie zobaczmy co się dzieje w momencie
 gdy $a \geq 1$. Weźmy wtedy pierwiastek n-tego stopnia z obydwu stron nierówności, nie musimy uważać na znak nierówności ponieważ $a$ jest dodatnie tak samo jak $1$.
@@ -495,7 +495,7 @@ jest liczba większa niż $1$. Wiemy zatem jaki jest wynik dla tej granicy, znam
     \lim_{n\to\infty}\sqrt[n]{a} = \frac{\lim_{n\to\infty} 1}{\lim_{n\to\infty} \sqrt[n]{\frac{1}{a}}} = \frac{1}{1} = 1
 \end{equation*}
 
-\subsection{Granica $\lim_{n\to\infty} \sqrt[n]{n} = 1$} \label{RudnickiWzor16Ciagi}
+\subsection{Granica $\lim_{n\to\infty} \sqrt[n]{n} = 1$} \label{RudnickiWzor17Ciagi}
 
 Chcemy sprawdzić, że $\lim_{n\to\infty} \sqrt[n]{n} = 1$. Przyjmijmy zatem, że $1 + b_{n} = \sqrt[n]{n}$. Wtedy:
 
@@ -607,7 +607,7 @@ Podsumowując:
     \lim_{n\to\infty} \sqrt[n]{n} = \lim_{n\to\infty} (1 + b_{n}) = 1 + 0 = 1
 \end{equation*}
 
-\subsection{Granica $\lim_{n\to\infty} \frac{n^k}{a^n} = 0$, dla $a > 1$, $k \in \mathbb{R}$}
+\subsection{Granica $\lim_{n\to\infty} \frac{n^k}{a^n} = 0$, dla $a > 1$, $k \in \mathbb{R}$} \label{RudnickiWzor18}
 
 
 
@@ -898,7 +898,7 @@ Ustawiając nierówność pod twierdzenie o trzech ciągach:
     \lim_{n\to\infty} 3 \sqrt[n]{2} = 3 \lim_{n\to\infty} \sqrt[n]{2}
 \end{equation*}
 
-Ze wzoru w \ref{RudnickiWzor16Ciagi}:
+Ze wzoru w \ref{RudnickiWzor16}:
 
 \begin{equation*}
     3 \lim_{n\to\infty} \sqrt[n]{2} = 3 \cdot 1 = 3
@@ -928,5 +928,20 @@ Podzielmy ułamek przez $4^n$:
 \begin{equation*}
     \lim_{n\to\infty} \frac{n \cdot \Big(\frac{3}{4} \Big)^{n} + 1}{\frac{5}{4^n} + \frac{1}{2^n} + 4}
 \end{equation*}
+
+Zauważmy, że:
+
+\begin{equation*}
+    n \cdot \Big(\frac{3}{4}\Big)^{n} = n \cdot \Big(\big(\frac{4}{3}\big)^{-1}\Big)^{n} = n \cdot \Big(\frac{4}{3}\Big)^{-n} = \frac{n}{\Big(\frac{4}{3}\Big)^{n}}
+\end{equation*}
+
+W mianowniku korzystamy, ze wzoru w \ref{RudnickiWzor15} i zostajemy z $4$. W liczniku korzystamy ze wzoru w \ref{RudnickiWzor18} (po to właśnie pokazaliśmy powyższe przekształcenie).
+Ostatecznie wynik to:
+
+\begin{equation*}
+    \lim_{n\to\infty} \frac{n \cdot \Big(\frac{3}{4} \Big)^{n} + 1}{\frac{5}{4^n} + \frac{1}{2^n} + 4} = \frac{1}{4}
+\end{equation*}
+
+
 
 \end{document}
