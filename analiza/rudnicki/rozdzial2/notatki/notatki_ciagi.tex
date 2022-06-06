@@ -942,6 +942,32 @@ Ostatecznie wynik to:
     \lim_{n\to\infty} \frac{n \cdot \Big(\frac{3}{4} \Big)^{n} + 1}{\frac{5}{4^n} + \frac{1}{2^n} + 4} = \frac{1}{4}
 \end{equation*}
 
+\subsubsection{Przykład 6 Rudnicki, 2.2 ciągi}
 
-
+Niech $(x_n)$ będzie ciągiem o wyrazach dodatnich zbieżnym do liczby $x > 0$. Sprawdzimy, że dla dowolnej liczby rzeczywistej $a$ mamy:
+%
+\begin{equation}
+    \lim_{n\to\infty} x_{n}^{a} = x^{a}
+\end{equation}
+%
+Rozważamy przypadek dla $a > 0$. Niech $u_n = \frac{x_n}{x} \ \ \ \mbox{dla} \ \ \ n \in \mathbb{N}$. Możemy sprytnie wykorzystać iloczyn granic i wtedy pokazać, że
+$\lim_{n\to\infty} u_{n}^{a} = 1$, bo wtedy z iloczynu granic mamy:
+%
+\begin{equation*}
+    \lim_{n\to\infty} x_{n}^a = \lim_{n\to\infty} u_{n}^a \cdot x^a = \lim_{n\to\infty} (\frac{x_n}{x})^{a} \cdot x^a = \lim_{n\to\infty} x_{n}^{a} = x^a
+\end{equation*}
+%
+Teraz clue całej sprawy. Po jakimś czasie możesz nie pamiętać jakim cudem to zadziała, po to robisz jak najdokładniejsze notatki. Niech:
+%
+\begin{equation*}
+    \underline{u}_n = \min(1, u_n)
+\end{equation*}
+%
+oraz
+%
+\begin{equation*}
+    \overline{u}_n = \max(1, u_n)
+\end{equation*}
+%
+dla $n \in \mathbb{N}$.
 \end{document}
