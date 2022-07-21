@@ -943,5 +943,56 @@ Ostatecznie wynik to:
 \end{equation*}
 
 
+\subsection{Przykład 9 Rudnicki, 2.2 ciągi}
+
+Niech $(x_n)$ będzie ciągiem zdefiniowanym rekurencyjnie:
+
+\begin{equation*}
+    x_{1} = 1
+\end{equation*}
+
+\begin{equation*}
+    x_{n} = \frac{1}{2} x_{n - 1} + 1 \ \ \mbox{dla} \ \  n \geq 2
+\end{equation*}
+
+Pokażemy, że ciąg $(x_n)$ jest zbieżny i obliczmy jego granicę. Skorzystamy sprytnie z twierdzenia
+mówiącego o tym, że każdy ciąg monotoniczny i ograniczony jest zbieżny. Najpierw korzystając z indukcji, sprawdzamy, że dla $n \in \mathbb{N}$ $x_{n} \leq 2$:
+
+\begin{description}
+
+    \item[Baza indukcji:] Dla $n=1$ nierówność jest prawdziwa bo:
+    
+    \begin{equation*}
+        x_1 = 1 \leq 2
+    \end{equation*}
+    
+    \item[Krok indukcyjny:] Zakładamy, że dla $(n-1)$ $\in \mathbb{N}$ nierównośc $x_{n} \leq 2$ jest prawdziwa.
+\end{description}
+
+
+    \begin{equation*}
+        x_n = \frac{1}{2} x_{n-1} + 1
+    \end{equation*}
+    %
+    Z założenia wiemy, że $x_{n-1} \leq 2$ a to oznacza, że $x_{n-1}$ jest ograniczone (UWAGA BŁĄD! NIE MAKSIMUM DLA XN2!):
+    %
+    \begin{equation*}
+        x_n = \frac{1}{2}x_{n-1} + 1 \leq \frac{1}{2} \cdot 2 + 1 = 2
+    \end{equation*}
+    %
+    Zatem:
+
+    \begin{equation*}
+        x_{n} \leq 2 \ \ \mbox{dla} \ \ n \in \mathbb{N}
+    \end{equation*}
+
+
+Teraz sprawdzamy czy ciąg $(x_{n})$ jest niemalejący (tzn. taki, że $x_{n+1} \geq x_{n}$) dla $n \in \mathbb{N}$.
+
+\begin{equation*}
+    x_{n} - x_{n-1} = \frac{1}{2}x_{n-1} + 1 - x_{n-1} = 1 - \frac{1}{2}x_{n-1} = \frac{1}{2}(2 - x_{n-1})
+\end{equation*}
+%
+Pokazaliśmy powyżej, że dla dowolnego $n \in \mathbb{N}$ $x_{n} \leq 2$
 
 \end{document}
