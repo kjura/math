@@ -974,7 +974,9 @@ mówiącego o tym, że każdy ciąg monotoniczny i ograniczony jest zbieżny. Na
         x_n = \frac{1}{2} x_{n-1} + 1
     \end{equation*}
     %
-    Z założenia wiemy, że $x_{n-1} \leq 2$ a to oznacza, że $x_{n-1}$ jest ograniczone (UWAGA BŁĄD! NIE MAKSIMUM DLA XN2!):
+    Z założenia wiemy, że $x_{n-1} \leq 2$ a to oznacza, że $x_{n-1}$ jest ograniczone przez liczbę $2$. Będziemy więc mogli wstawić 
+    te liczbę do naszej nierówności na miejsce $x_{n-1}$. Może to być trochę nieoczywiste ale jest to legalne, wszak z założenia $x_{n-1} \leq 2$, tak naprawdę operujemy
+    na nierównościach więc tak długo jak bedą miały "sens", możemy takie szacowania tworzyć:
     %
     \begin{equation*}
         x_n = \frac{1}{2}x_{n-1} + 1 \leq \frac{1}{2} \cdot 2 + 1 = 2
@@ -990,9 +992,47 @@ mówiącego o tym, że każdy ciąg monotoniczny i ograniczony jest zbieżny. Na
 Teraz sprawdzamy czy ciąg $(x_{n})$ jest niemalejący (tzn. taki, że $x_{n+1} \geq x_{n}$) dla $n \in \mathbb{N}$.
 
 \begin{equation*}
-    x_{n} - x_{n-1} = \frac{1}{2}x_{n-1} + 1 - x_{n-1} = 1 - \frac{1}{2}x_{n-1} = \frac{1}{2}(2 - x_{n-1})
+    x_{n} - x_{n-1} = \frac{1}{2}x_{n-1} + 1 - x_{n-1} = 1 - \frac{1}{2}x_{n-1} = \frac{1}{2}(2 - x_{n-1}) \geq 0
 \end{equation*}
 %
-Pokazaliśmy powyżej, że dla dowolnego $n \in \mathbb{N}$ $x_{n} \leq 2$
+Wiemy, że $x_{n} \leq 2$ dla dowolnego naturalnego $n$ (dlatego dla $x_{n-1} \leq 2$ nierówność również jest prawdziwa).
+W takim razie wyrażenie w nawiasie nie będzie ujemne i pokazaliśmy, że dla liczby naturalnej $n \geq 2$ $x_{n} \geq x_{n-1}$ więc ciąg jest niemalejący.
+
+\begin{center}
+    Ponieważ pokazaliśmy, że ciąg jest ograniczony (przez $2$) i niemalejący to jest to równoważne stwierdzeniu, że jest zbieżny i
+    ma jakąś granicę $x$.
+\end{center}
+
+Liczbę $x$ możemy wyznaczyć korzystając z definicji dla $n$-tego wyrazu ciągu. Weźmy granicę z tego wyrażenia:
+
+\begin{equation*}
+    \lim_{n\to\infty} x_{n} = \lim_{n\to\infty}\Big(\frac{1}{2} x_{n - 1} + 1\Big)
+\end{equation*}
+
+\begin{equation*}
+    \lim_{n\to\infty} x_{n} = \lim_{n\to\infty} \frac{1}{2}x_{n-1} +  \lim_{n\to\infty} 1
+\end{equation*}
+
+\begin{equation*}
+    x = \lim_{n\to\infty} \frac{1}{2}x_{n-1} + 1
+\end{equation*}
+
+\begin{equation*}
+    x = \frac{1}{2}x + 1 \ \ \ / \cdot 2
+\end{equation*}
+
+\begin{equation*}
+    2x = x + 2  \ \ \ \ / \ (-x)
+\end{equation*}
+
+\begin{equation*}
+    x = 2
+\end{equation*}
+
+Tak więc policzyliśmy granicę:
+
+\begin{equation*}
+    \lim_{n\to\infty} x_{n} = \lim_{n\to\infty}\Big(\frac{1}{2} x_{n - 1} + 1\Big)
+\end{equation*}
 
 \end{document}
